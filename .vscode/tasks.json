@@ -1,0 +1,21 @@
+{
+    "version": "0.1.0",
+    "command": "npm",
+    "isShellCommand": true,
+    "showOutput": "always",
+    "suppressTaskName": true,
+    "tasks": [
+        {
+            "taskName": "start",
+            "args": [
+                "start"
+            ]
+        },
+        {
+            "taskName": "production",
+            "args": [
+                "production"
+            ]
+        }
+    ]
+}
