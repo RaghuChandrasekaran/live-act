@@ -1,7 +1,3 @@
-.App {
-  text-align: center;
-}
-
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 80px;
@@ -14,8 +10,32 @@
   color: white;
 }
 
-.App-intro {
-  font-size: large;
+header{
+  display: block;
+  height: 10vh;
+  overflow: auto;
+  background-color:pink;
+  color:red;
+  font-size: 28px;
+}
+
+.container{
+  display:flex;
+  flex-direction: row;
+}
+
+pre,textarea{
+  width:50%;
+  font-size:20px;
+  margin:0;
+  color:#222;
+  padding: 10px;
+  height:90vh;
+  overflow: auto;
+}
+
+textarea{
+  background-color: #f8f8f8;
 }
 
 @keyframes App-logo-spin {
