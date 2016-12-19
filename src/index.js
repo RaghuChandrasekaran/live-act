@@ -7,3 +7,6 @@ ReactDOM.render(
   <App />,
   document.getElementById('root')
 );
+
+window.React = React;
+window.ReactDOM = ReactDOM;

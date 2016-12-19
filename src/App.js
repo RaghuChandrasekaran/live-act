@@ -15,11 +15,15 @@ class App extends Component {
 
   update(e) {
     let code = e.target.value;
+    let transpiledCode = Babel.transform(code, { presets: ['react', 'es2015'] })
+      .code
+      .replace('"use strict";', '');
     try {
       this.setState({
-        output: Babel.transform(code, { presets: ['react', 'es2015'] }).code,
+        output: transpiledCode,
         err: ''
       });
+      eval(transpiledCode);
     } catch (err) {
       this.setState({
         err: err.message
@@ -41,6 +45,7 @@ class App extends Component {
             defaultValue={this.state.input}
             />
           <pre>{this.state.output}</pre>
+          <div id="output"></div>
         </div>
       </div>
     );
